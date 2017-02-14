@@ -1,13 +1,13 @@
 var express = require("express");
+
 var mongoose = require("mongoose");
 var bodyParser = require("body-parser");
-
 
 var app = express();
 var port = (process.env.PORT || 3000);
 
-app.use(bodyParser.json())
 
+app.use(bodyParser.json())
 
 //////////////schema and model///////////////////////////////////////////
 var studentSchema = new mongoose.Schema({
@@ -15,7 +15,7 @@ var studentSchema = new mongoose.Schema({
     studing : String,
     class: String
 });
-var studentModel = mongoose.model("student", studentSchema);
+var studentModel = mongoose.model("student new Name", studentSchema);
 //////////////schema and model//////////////////////////////////////////
 
 
