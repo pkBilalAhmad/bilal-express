@@ -1,7 +1,7 @@
 {
   "name": "hello-express",
   "version": "1.0.0",
-  "description": "",
+  "description": "express file",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,5 +11,14 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.14.1"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pkBilalAhmad/bilal-express.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pkBilalAhmad/bilal-express/issues"
+  },
+  "homepage": "https://github.com/pkBilalAhmad/bilal-express#readme"
 }
