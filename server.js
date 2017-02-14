@@ -19,7 +19,7 @@ var studentModel = mongoose.model("student new Name", studentSchema);
 //////////////schema and model//////////////////////////////////////////
 
 
-app.post("/post", function (req, res, next) {
+app.post("/user", function (req, res, next) {
     //console.log("body is: ",req.body);
 
     var newStudent = new studentModel({
@@ -40,9 +40,14 @@ app.post("/post", function (req, res, next) {
 });
 
 
+app.get("/users", function (req, res, next) {
+    console.log("reauest is comming to '/' ");
+    res.send("get all users api");
+});
+
 app.get("/", function (req, res, next) {
     console.log("reauest is comming to '/' ");
-    res.send("Hello express");
+    res.send("Hello world express");
 });
 
 app.listen(port, function () {
@@ -51,8 +56,6 @@ app.listen(port, function () {
 
 
 mongoose.connect("mongodb://pkbilal:6363@ds151909.mlab.com:51909/pkbilal");
-
-
 mongoose.connection.on('connected', function () {
     console.log("Mongoose is connected");
 });
