@@ -4,7 +4,7 @@ var mongoose = require("mongoose");
 var bodyParser = require("body-parser");
 
 var app = express();
-var port = (process.env.PORT || 3000);
+var port = (process.env.PORT || 4000);
 
 
 app.use(bodyParser.json())
@@ -19,8 +19,7 @@ var studentModel = mongoose.model("student new Name", studentSchema);
 //////////////schema and model//////////////////////////////////////////
 
 
-app.post("/add", function (req, res, next) {
-git 
+app.post("/post", function (req, res, next) {
     //console.log("body is: ",req.body);
 
     var newStudent = new studentModel({
@@ -43,14 +42,16 @@ git
 
 app.get("/", function (req, res, next) {
     console.log("reauest is comming to '/' ");
-    res.send("Hello Karachi");
+    res.send("Hello express");
 });
 
 app.listen(port, function () {
     console.log('app is running on port', port);
 });
 
-mongoose.connect("mongodb://pkbilal:636363@ds013004.mlab.com:13004/pkbilal");
+
+mongoose.connect("mongodb://pkbilal:6363@ds151909.mlab.com:51909/pkbilal");
+
 
 mongoose.connection.on('connected', function () {
     console.log("Mongoose is connected");
